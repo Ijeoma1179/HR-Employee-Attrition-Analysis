@@ -1,85 +1,143 @@
-**HR Employee Attrition Analysis & Prediction**
-This project analyzes employee attrition in an organization using data-driven insights and builds predictive models to identify employees likely to leave. The final model aids HR teams in making informed decisions to improve employee retention.
+## **HR Employee Attrition Project: Use Case Analysis & Predictive Modeling**
 
-**Project Structure**
+This project is divided into two parts.
 
-HR-Employee-Attrition-Analysis/
- Part1_Use_Case_Analysis.ipynb     # Exploratory data analysis and insights
+## **Part One** : Explores HR attrition-related questions through data analysis.
 
-Part2_Model_Building.ipynb        # Model building and comparison
+## **Part Two** : Builds and compares machine learning models to predict employee attrition.
+  The final Logistic Regression model was selected and saved for future use. Visualization was performed within Jupyter Notebook.
 
-logistic_model.pkl                # Final saved logistic regression model
 
-scaler.pkl                        # Scaler used in model preprocessing
+###**Project Files**
 
-analysis_screenshot.png           # Screenshot of key use case insights
+* `HR Employee analysis.ipynb` — Use case analysis and EDA (Part 1)
+* `HR employee model.ipynb` — Feature engineering, SMOTE-enhanced modeling, model comparison (Part 2)
+* `logistic_model.pkl` — Final Logistic Regression model
+* `scaler.pkl` — Preprocessing scaler used for model inputs
+* `Screenshot of the analysis.JPG` — Visual overview of the use case findings
+* `README.md` — Project documentation
 
-README.md                         # Project documentation
 
-**Part 1: Use Case Analysis**
-The first notebook (Part1_Use_Case_Analysis.ipynb) explores the following key HR questions:
 
-Which department has the highest attrition rate?
+## **About the Dataset**
 
-Is there a strong relationship between job satisfaction and attrition?
+The dataset contains information about employees, including:
 
-Does overtime or work-life balance correlate with attrition?
+* Job Role
+* Department
+* Job Satisfaction
+* Overtime
+* Work-Life Balance
+* Age, Salary, and other HR-relevant metrics
 
-Are certain roles, age groups, or salary bands more at risk?
+---
 
-These questions were answered using data visualization and descriptive statistics to support HR decision-making.
+##  Project Objectives
 
-**Part 2: Model Building**
-The second notebook (Part2_Model_Building.ipynb) focuses on predictive modeling:
+###  Part One: Use Case Analysis
 
-Model 1: Random Forest with SMOTE
-A Random Forest classifier trained with SMOTE to address class imbalance.
+Key HR questions explored:
 
-Model 2: Logistic Regression (Final Model)
-After comparison, Logistic Regression with class_weight='balanced' provided better interpretability and practical accuracy for HR use.
+* **Which department has the highest attrition rate?**
+* **Is there a strong relationship between job satisfaction and attrition?**
+* **Does overtime or work-life balance correlate with attrition?**
+* **Are certain roles, age groups, or salary bands more at risk of attrition?**
 
-**Final Model Selection:**
-Chosen Model: Logistic Regression
+Tools:
+Pandas, Seaborn, Matplotlib
 
-Reason: Balanced performance in accuracy, recall, and simplicity for deployment.
 
-Saved Artifacts:
 
-logistic_model.pkl – Trained logistic regression model
+### Part Two: Predictive Modeling
 
-scaler.pkl – Scaler for preprocessing test data
+#### Goals
 
-**Tools & Libraries**
-Python (Jupyter Notebook)
+* Build a predictive model to identify employees at risk of attrition.
+* Compare model performance using accuracy, recall, and precision.
 
-pandas, numpy, matplotlib, seaborn
+#### 💡 Steps
 
-scikit-learn (LogisticRegression, RandomForestClassifier, SMOTE)
+1. **Data Preprocessing**
 
-joblib (for model serialization)
+   * Encoding categorical features
+   * Scaling numerical values
+   * Addressing class imbalance using SMOTE
+2. **Modeling**
 
-**Insights for HR Decision Making**
-Job satisfaction and overtime are strong predictors of attrition.
+   * Random Forest Classifier (SMOTE-enhanced)
+   * Logistic Regression (balanced class weight)
+3. **Model Evaluation**
 
-Certain job roles and age groups showed higher risk.
+   * Confusion Matrix
+   * Accuracy Score
+   * Classification Report
+4. **Model Selection**
 
-Department-level analysis helps prioritize retention strategies.
+   * Final Model: Logistic Regression
+   * Saved as `logistic_model.pkl`
+   * Scaler saved as `scaler.pkl`
 
-**How to Use**
-Clone the repository
-git clone https://github.com/your-username/HR-Employee-Attrition-Analysis.git
+
+
+## Evaluation Summary
+
+| Model                   | Accuracy         | Recall   | Precision |
+| ----------------------- | ---------------- | -------- | --------- |
+| Random Forest (SMOTE)   | Moderate         | Moderate | Moderate  |
+| **Logistic Regression** | **Best Overall** | **High** | **High**  |
+
+**Conclusion**:
+Logistic Regression was chosen for its clarity, reliability, and balanced performance on key metrics.
+
+
+
+## Getting Started
+
+To run the project:
+
+### Requirements
+
+Install required libraries:
+
+pip install pandas numpy matplotlib seaborn scikit-learn imbalanced-learn joblib
+
+
+### ▶Clone the Repository
+
+
+git clone https://github.com/Ijeoma1179/HR-Employee-Attrition-Analysis.git
 cd HR-Employee-Attrition-Analysis
-Open the Jupyter notebooks to view the analysis and model training.
 
-**Load the model with:**
 
-python
+### Load the Model
+
 import joblib
 model = joblib.load('logistic_model.pkl')
 scaler = joblib.load('scaler.pkl')
-**Screenshot Preview**
-A screenshot showing part of the use case analysis is included for quick reference.
 
-📧 Contact
-For questions or collaboration, feel free to reach out via GitHub Issues or email.
+
+### Insights for HR
+
+* High attrition in specific departments and job roles
+* Strong correlation between low job satisfaction, overtime, and attrition
+* Younger employees with lower income more likely to leave
+
+
+
+##  Visual Snapshot
+
+A summary screenshot (`Screenshot of the analysis.JPG`) is included to provide a quick glance at key analytical insights.
+
+
+
+## Author
+
+Developed by **Nwadike Ijeoma Mary**,
+A passionate **Data Scientist** dedicated to using analytics to solve real-world business problems.
+
+Reach out: **[aijayij@gmail.com](mailto:aijayij@gmail.com)**
+
+
+
+
 
