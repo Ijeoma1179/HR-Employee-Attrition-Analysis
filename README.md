@@ -1,6 +1,8 @@
 ## **HR Employee Attrition Project: Use Case Analysis & Predictive Modeling**
 
-This project is divided into two parts.
+This project focuses on analyzing employee attrition using an HR dataset and developing a predictive model to identify employees at risk of leaving the organization. The dataset includes various employee attributes such as job role, department, satisfaction levels, age, income, overtime status, and more.
+
+## This project is divided into two parts.
 
 ## **Part One** : Explores HR attrition-related questions through data analysis.
 
